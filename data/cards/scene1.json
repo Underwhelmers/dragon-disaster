@@ -1,0 +1,216 @@
+{
+  "scene 1 intro": {
+	"text": "You enter the cave of the dragon, and there it is.\n\nJust as the legends foretold, your eyes lay in her alluring shape.\n\nThe pink dragon, rests unbothered by your presence",
+	"req": [
+	  "scene 1 active",
+	  "in progress",
+      "game just started"
+	],
+	"ops": [
+	  {
+		"text": "\"O MIGHTY DRAGON!\"\n\n\"LET ME HAVE THAT PLUMP PUSSY!\"",
+		"eff": {
+		  "removes": [
+            "game just started"
+		  ],
+		  "triggers": [
+            "game over"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"O MIGHTY DRAGON!\"\n\n\"I HAVE COME WITH ONE REQUEST!\"",
+		"eff": {
+		  "removes": [
+            "game just started"
+		  ],
+		  "triggers": [
+            "intro done"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 1 game over": {
+	"text": "You suck, that was the wrong choice.",
+	"req": [
+	  "scene 1 active",
+      "game over"
+	],
+	"ops": [
+	  {
+		"text": "Let me try again!",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  },
+	  {
+		"text": "One more go!!",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 1 step 1": {
+	"text": "Your loud claim reaches her ears, and slowly opens her eyes to look at you.\nAmused by your presence it asks.\n\n\"And what would this request be?\"",
+	"req": [
+	  "scene 1 active",
+	  "intro done",
+      "in progress"
+	],
+	"ops": [
+	  {
+		"text": "\"THAT THOU ALLOW ME TO PLUNDER THY PUSSY\"",
+		"eff": {
+		  "triggers": [
+            "game over"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"THAT THOU ALLOW ME TO PROVE MY SELF WORTHY OF THY\"",
+		"eff": {
+		  "triggers": [
+            "step 1 done"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 1 step 2": {
+	"text": "Her expresion grows more curious with each word, a tinge of amusement also appears.\n\n\"And how shall thy prove that?\"\n",
+	"req": [
+	  "scene 1 active",
+	  "in progress",
+      "step 1 done"
+	],
+	"ops": [
+	  {
+		"text": "\"BY HAVING THY PUSSY IN A RIDE WILD ENOUGH, THAT SONGS WILL BE WRITTEN IN AWE OF YOUR THUNDEROUS MOANS\"",
+		"eff": {
+		  "adds": [
+            "go for pussy"
+		  ],
+		  "triggers": [
+            "step 2 done"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"BY SHOWING YOU THE LIMITS OF MY BODY\"\n\n\"TRY USING THY MIGHTY ASS TO SIT ON ME AS I PLEASE YOU\"",
+		"eff": {
+		  "adds": [
+            "go for facesit"
+		  ],
+		  "triggers": [
+            "step 2 done"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 1 step 3": {
+	"text": "The amusement in her face changes to pure confusion.\n\n\"Art thou telling me, that thou consider, thy mission posible\"\n\n\"Allow me to ask, how do thy intend to accomplish it?\"",
+	"req": [
+	  "scene 1 active",
+	  "in progress",
+      "step 2 done"
+	],
+	"ops": [
+	  {
+		"text": "*I'll pull my dick out to snuff every doubt the dragon has*",
+		"eff": {
+		  "triggers": [
+            "step 3 done"
+		  ]
+		},
+		"req": [
+          "go for pussy"
+		]
+	  },
+	  {
+		"text": "\"How dare you to doubt me? You whore\"",
+		"eff": {
+		  "triggers": [
+            "game over"
+		  ],
+		  "exec": [
+            ""
+		  ]
+		}
+	  },
+	  {
+		"text": "*I'll take my tongue out at least 6 feet, to prove my point*",
+		"eff": {
+		  "triggers": [
+            "step 3 done"
+		  ]
+		},
+		"req": [
+          "go for facesit"
+		]
+	  }
+	]
+  },
+  "scene 1 step 4 facesit": {
+	"text": "As your tongue keeps growing larger like the rope in a magician trick.\n\nYou see in her face the sudden realization of the weight behind your words.\n\n\"Eh... Soo... What were you saying?\"",
+	"req": [
+	  "go for facesit",
+	  "scene 1 active",
+	  "step 3 done",
+      "in progress"
+	],
+	"ops": [
+	  {
+		"text": "\"COME FORTH WITH ALL THY MIGHT AND GIVE MY TONGUE A SECOND HOME!\"",
+		"eff": {
+		  "removes": [
+			"scene 1 active",
+            "in progress"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"Yesh, jhow manjy thymes I hath tho drepeth mythelph\"",
+		"eff": {
+		  "triggers": [
+            "game over"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 1 step 4 pussy": {
+	"text": "As your dick gets released to the world. Its ludicrous large size appears to emanate light as it keeps growing.\n\n\"Soooo, songs you said?\"\n\nSays the dragons, with her confidence shattered.",
+	"req": [
+	  "scene 1 active",
+	  "in progress",
+	  "step 3 done",
+      "go for pussy"
+	],
+	"ops": [
+	  {
+		"text": "\"THOU SHALL RECEIVE THE FULL MIGHT OF MY COCK!\"",
+		"eff": {
+		  "removes": [
+			"in progress",
+            "scene 1 active"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"You weak lizzard, I'll never let a pushover have my cock!\"",
+		"eff": {
+		  "triggers": [
+            "game over"
+		  ]
+		}
+	  }
+	]
+  }
+}

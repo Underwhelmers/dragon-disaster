@@ -1,0 +1,25 @@
+{
+  "empty event": {
+    "text": "You can reach this always ",
+    "req": [
+      "!gogo",
+      "!toto",
+      "!momo",
+      "!bobo",
+      "!soso",
+      "!popo",
+      "!pipo",
+      "!mimo"
+    ],
+    "ops": [
+      {
+        "text": "Test 1",
+        "eff": {}
+      },
+      {
+        "text": "Test 2",
+        "eff": {}
+      }
+    ]
+  }
+}

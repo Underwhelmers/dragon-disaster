@@ -1,0 +1,276 @@
+{
+  "scene 2 intro": {
+	"text": "By placing your cock in their pussy you make the dragon jolt.\n\n\"It's warmer than I was expecting, this feels nice\"",
+	"req": [
+	  "!in progress",
+	  "!scene 2 explored",
+      "go for pussy"
+	],
+	"ops": [
+	  {
+		"text": "\"Allow me to smooth the field before I start plowing\"",
+		"eff": {
+		  "adds": [
+			"scene 2 explored",
+			"in progress",
+            "scene 2 active"
+		  ],
+		  "triggers": [
+            "intro done"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"FEEL THE WRATH OF THE WRATH GOD!\"",
+		"eff": {
+		  "adds": [
+			"scene 2 explored",
+			"in progress",
+			"scene 2 active",
+            "hard fucking"
+		  ],
+		  "triggers": [
+            "intro done"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 step 1 soft": {
+	"text": "You start to rub your gland across their soft and plump labia mayora.\n\n\"What a gentleman, but I am sturdier than what you think\"",
+	"req": [
+	  "scene 2 active",
+	  "!hard fucking",
+      "intro done"
+	],
+	"ops": [
+	  {
+		"text": "\"My bad, mighty dragon\"\n\nCock and fire the plowing tool",
+		"eff": {
+		  "adds": [
+            "hard fucking"
+		  ],
+		  "triggers": [
+            "intro done"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"Even here?\"\n\nAlign your cock to their anus.",
+		"eff": {
+		  "adds": [
+            "target ass"
+		  ],
+		  "triggers": [
+            "step 1 done"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 1 step 1 hard": {
+	"text": "\"Gh!\"\n\nThe dragon was ready but not ready enough.\n\nShe overestimated herself, or underestimated you.",
+	"req": [
+	  "hard fucking",
+	  "intro done",
+      "scene 2 active"
+	],
+	"ops": [
+	  {
+		"text": "Keep the pressure, she held her voice.\n\nSo you are not done yet.",
+		"eff": {
+		  "triggers": [
+            "step 1 done"
+		  ]
+		}
+	  },
+	  {
+		"text": "She kept her voice in, you might want to change... tactics...\n\n*Camera zoom in to her asshole*",
+		"eff": {
+		  "adds": [
+            "target ass"
+		  ],
+		  "triggers": [
+            "step 1 done"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 step 2 hard pussy": {
+	"text": "As her first reaction was not strong enough your efforts double.\n\n\"Hmm... Hmmm...\"\n\nIf reptiles could sweat you are sure she would be.\n\nJust from the effort of keeping her voice in.",
+	"req": [
+	  "scene 2 active",
+	  "hard fucking",
+	  "step 1 done",
+      "!target ass"
+	],
+	"ops": [
+	  {
+		"text": "\"HOLD NO MORE, THOU SHALL FALL TO MY MIGHT\"",
+		"eff": {
+		  "removes": [
+            "scene 2 active"
+		  ],
+		  "triggers": [
+            "ending"
+		  ]
+		}
+	  },
+	  {
+		"text": "Take it slow and keep her waiting",
+		"eff": {
+		  "triggers": [
+            "game over"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 game over": {
+	"text": "Why?!\n\nYou were doing so good...",
+	"req": [
+	  "scene 2 active",
+      "game over"
+	],
+	"ops": [
+	  {
+		"text": "What? what just hap-",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  },
+	  {
+		"text": "Doing what?",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 hard anal game over": {
+	"text": "\"Yeouch! You punny creature how dare you!\"\n\nHer fire breath burns even your ashes.\n\nYou should prepare more before plowing asses.",
+	"req": [
+	  "target ass",
+	  "hard fucking",
+	  "scene 2 active",
+      "!ass is ready"
+	],
+	"ops": [
+	  {
+		"text": "I know, I just got impatient.",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  },
+	  {
+		"text": "Seriously?! It's porn, porn logic should allow me to do wha-",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 step 2 soft anal": {
+	"text": "\"What are thy thinking?\"\n\nHer stern looks lasts short tho, the warm gentle moves plus your natural lube rapidly smooths her attitude, and her rim.\n\n\"You do seem dextrous with it\"",
+	"req": [
+	  "target ass",
+	  "step 1 done",
+	  "scene 2 active",
+      "!hard fucking"
+	],
+	"ops": [
+	  {
+		"text": "\"Just a little more and we will give you what you ask for\"",
+		"eff": {
+		  "adds": [
+            "ass is ready"
+		  ],
+		  "triggers": [
+            "step 2 done"
+		  ]
+		}
+	  },
+	  {
+		"text": "\"BEGONE FOUL SPIRIT!\"",
+		"eff": {
+		  "adds": [
+            "hard fucking"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 soft ass ready": {
+	"text": "\"Ohh, this is new..\"\n\nYou have already moved and poked enough to be able to go, in and out smoothly.\n\nIf you were waiting for a signal, it doesn't get clearer than this.",
+	"req": [
+	  "scene 2 active",
+	  "target ass",
+	  "ass is ready",
+      "!hard fucking"
+	],
+	"ops": [
+	  {
+		"text": "\"ALAS!\"\n\n\"I'LL USE THY REAR END TO MAKE YOU SQUEAL MY NAME!\"",
+		"eff": {
+		  "adds": [
+            "hard fucking"
+		  ],
+		  "removes": [
+			"scene 2 active",
+            "in progress"
+		  ],
+		  "triggers": [
+            "ending"
+		  ]
+		}
+	  },
+	  {
+		"text": "With this her front probably is ready!",
+		"eff": {
+		  "removes": [
+			"target ass",
+			"ass is ready",
+            "hard fucking"
+		  ],
+		  "triggers": [
+            "game over ass to pussy"
+		  ]
+		}
+	  }
+	]
+  },
+  "scene 2 ass to pussy game over": {
+	"text": "You start the motion of changing holes, and a smack strong enough to break your skull hits you instantly.\n\n\"Thy brains are fried if thy think I'll allow that thing in there, after being in the back\"",
+	"req": [
+	  "game over ass to pussy",
+      "scene 2 active"
+	],
+	"ops": [
+	  {
+		"text": "\"I guess that makes sense...\"\n\nAnd you die...",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  },
+	  {
+		"text": "Why?!\n\nAgain?!",
+		"eff": {
+		  "exec": [
+            "restart"
+		  ]
+		}
+	  }
+	]
+  }
+}

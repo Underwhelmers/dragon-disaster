@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SJ10 HM attempt"
+run/main_scene="uid://b1axr13hy82te"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+DataLoader="*uid://kdl2iqqjwn8x"
+Events="*uid://dxmsa2xdaerx4"
+GenericActionParser="*uid://cefy5htg47ekh"
+ActionStateMachine="*uid://cpstuxxl84j7m"
+NpcResponseGenerator="*uid://c6h6cryurpnmp"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
