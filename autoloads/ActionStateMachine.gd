@@ -7,7 +7,7 @@ var triggers: Array = [] # temporal triggered events
 var values: Dictionary = {}
 
 func _init():
-	load_actions("cards/scene1")
+	load_actions("cards/test-scene1")
 	load_actions("cards/scene2")
 	#load_actions("cards/test-repeat")
 	
@@ -134,11 +134,17 @@ func pop_valid_action():
 
 func get_valid_ops(action_name: String) -> Dictionary:
 	if action_name == "watching the aviss":
-		return aviss_action()
+		return {
+			"left" : { "text": "Let's go back...", "eff": { "exec":["restart"] } },
+			"right": { "text": "Let's go back...", "eff": { "exec":["restart"] } }
+		}
 	
 	if not actions_data.has(action_name):
 		push_error("Action not found: " + action_name)
-		return {}
+		return {
+			"left" : { "text": "Reset...", "eff": { "exec":["restart"] } },
+			"right": { "text": "Reset...", "eff": { "exec":["restart"] } }
+		}
 
 	var ops: Array = actions_data[action_name].get("ops", [])
 	var resultL: Array = []
@@ -178,15 +184,3 @@ func execute_op(op: Dictionary):
 	apply_effect(eff)
 
 	return eff
-
-
-func aviss_action():
-	var result = []
-	
-	#for t in state:
-	#	result.append({ "text": "NO "+t, "eff": { "removes":[t] } })
-	
-	while result.size() < 2:
-		result.append({ "text": "Let's go back...", "eff": { "exec":["restart"] } })
-	
-	return result
