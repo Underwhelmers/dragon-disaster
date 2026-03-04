@@ -16,7 +16,8 @@
 		  "triggers": [
             "game over"
 		  ]
-		}
+		},
+		"side": "left"
 	  },
 	  {
 		"text": "\"O MIGHTY DRAGON!\"\n\n\"I HAVE COME WITH ONE REQUEST!\"",
@@ -27,7 +28,8 @@
 		  "triggers": [
             "intro done"
 		  ]
-		}
+		},
+		"side": "right"
 	  }
 	]
   },
@@ -44,7 +46,8 @@
 		  "exec": [
             "restart"
 		  ]
-		}
+		},
+		"side": "left"
 	  },
 	  {
 		"text": "One more go!!",
@@ -52,7 +55,8 @@
 		  "exec": [
             "restart"
 		  ]
-		}
+		},
+		"side": "right"
 	  }
 	]
   },
@@ -70,7 +74,8 @@
 		  "triggers": [
             "game over"
 		  ]
-		}
+		},
+		"side": "left"
 	  },
 	  {
 		"text": "\"THAT THOU ALLOW ME TO PROVE MY SELF WORTHY OF THY\"",
@@ -78,7 +83,8 @@
 		  "triggers": [
             "step 1 done"
 		  ]
-		}
+		},
+		"side": "right"
 	  }
 	]
   },
@@ -99,7 +105,8 @@
 		  "triggers": [
             "step 2 done"
 		  ]
-		}
+		},
+		"side": "left"
 	  },
 	  {
 		"text": "\"BY SHOWING YOU THE LIMITS OF MY BODY\"\n\n\"TRY USING THY MIGHTY ASS TO SIT ON ME AS I PLEASE YOU\"",
@@ -110,7 +117,8 @@
 		  "triggers": [
             "step 2 done"
 		  ]
-		}
+		},
+		"side": "right"
 	  }
 	]
   },
@@ -131,7 +139,8 @@
 		},
 		"req": [
           "go for pussy"
-		]
+		],
+		"side": "left"
 	  },
 	  {
 		"text": "\"How dare you to doubt me? You whore\"",
@@ -142,7 +151,8 @@
 		  "exec": [
             ""
 		  ]
-		}
+		},
+		"side": "right"
 	  },
 	  {
 		"text": "*I'll take my tongue out at least 6 feet, to prove my point*",
@@ -153,7 +163,8 @@
 		},
 		"req": [
           "go for facesit"
-		]
+		],
+		"side": "left"
 	  }
 	]
   },
@@ -173,7 +184,8 @@
 			"scene 1 active",
             "in progress"
 		  ]
-		}
+		},
+		"side": "right"
 	  },
 	  {
 		"text": "\"Yesh, jhow manjy thymes I hath tho drepeth mythelph\"",
@@ -181,7 +193,8 @@
 		  "triggers": [
             "game over"
 		  ]
-		}
+		},
+		"side": "left"
 	  }
 	]
   },
@@ -201,7 +214,8 @@
 			"in progress",
             "scene 1 active"
 		  ]
-		}
+		},
+		"side": "right"
 	  },
 	  {
 		"text": "\"You weak lizzard, I'll never let a pushover have my cock!\"",
@@ -209,7 +223,8 @@
 		  "triggers": [
             "game over"
 		  ]
-		}
+		},
+		"side": "left"
 	  }
 	]
   }
