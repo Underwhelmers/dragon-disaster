@@ -1,0 +1,98 @@
+{
+	"game intro: intro": {
+		"text": "Before the adventure begins.\n\nThis game contains A LOT of explicit detailed 18+ situations.\n\nSo you MUST be 18+",
+		"req": [
+			"game intro active",
+			"in progress",
+			"location:nowhere"
+		],
+		"ops": [
+			{
+				"text": "I am 18+",
+				"eff": {
+					"triggers": [
+						"intro done"
+					]
+				},
+				"side": "right"
+			},
+			{
+				"text": "I am not 18+",
+				"eff": {
+					"exec": [
+						"hard_close_game"
+					]
+				},
+				"side": "left"
+			}
+		]
+	},
+	"game intro: step 1": {
+		"text": "Let's set the scene:\n\nYou are an adventurer, and in this __________ you have finally reached your destination.",
+		"req": [
+			"game intro active",
+			"in progress",
+			"intro done"
+		],
+		"ops": [
+			{
+				"text": "... star filled night ...",
+				"eff": {
+					"adds": [
+						"daytime:night"
+					],
+					"triggers": [
+						"step 1 done"
+					]
+				},
+				"side": "left"
+			},
+			{
+				"text": "... bright day ...",
+				"eff": {
+					"adds": [
+						"daytime:day"
+					],
+					"triggers": [
+						"step 1 done"
+					]
+				},
+				"side": "right"
+			}
+		]
+	},
+	"game scene: step 2": {
+		"text": "It has been a long time, but on the 5th __________ since you started your journey you are finally here.",
+		"req": [
+			"game intro active",
+			"in progress",
+			"step 1 done"
+		],
+		"ops": [
+			{
+				"text": "... winter ...",
+				"eff": {
+					"adds": [
+						"season:winter"
+					],
+					"triggers": [
+						"step 2 done"
+					]
+				},
+				"side": "left"
+			},
+			{
+				"text": "... summer ...",
+				"eff": {
+					"adds": [
+						"season:summer"
+					],
+					"triggers": [
+						"step 2 done"
+					]
+				},
+				"side": "right"
+			}
+		]
+	}
+}
