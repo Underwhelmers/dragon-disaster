@@ -51,8 +51,7 @@ func has_all(reqs: Array) -> bool:
 func apply_effect(eff: Dictionary):
 	if eff.has("adds"):
 		for tag in eff["adds"]:
-			if tag not in state:
-				state.append(tag)
+			add_tag(tag)
 
 	if eff.has("removes"):
 		for tag in eff["removes"]:
@@ -79,7 +78,16 @@ func apply_effect(eff: Dictionary):
 	if eff.has("exec"):
 		var scrs = eff["exec"]
 		Events.execute_signal(scrs.duplicate())
+
+func add_tag(tag: String) -> void:
+	if tag in state: return
+	var prefix = tag.get_slice(":", 0) + ":"
 	
+	if tag.contains(":"):
+		state = state.filter(func(t): return !t.begins_with(prefix))
+	
+	state.append(tag)
+
 func get_valid_actions() -> Array:
 	var result: Array = []
 
