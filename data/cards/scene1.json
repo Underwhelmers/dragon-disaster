@@ -1,6 +1,6 @@
 {
   "scene 1 intro": {
-	"text": "You enter the cave of the dragon, and there it is.\n\nJust as the legends foretold, your eyes lay in her alluring shape.\n\nThe pink dragon, rests unbothered by your presence",
+	"text": "You enter the cave of the dragon, and there it is.\n\nJust as the legends foretold, your eyes lay in her alluring shape.\n\nThe pink dragon, rests unbothered by your presence\n\n<--   -->",
 	"req": [
 	  "scene 1 active",
 	  "in progress",
