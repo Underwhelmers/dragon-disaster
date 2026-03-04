@@ -7,12 +7,15 @@ var triggers: Array = [] # temporal triggered events
 var values: Dictionary = {}
 
 func _init():
-	load_actions("cards/test-scene1")
-	load_actions("cards/scene2")
-	#load_actions("cards/test-repeat")
-	
 	var data := DataLoader.load_json_for("config/state-machine")
 	state = data.initial_state
+	
+	for file in data.files_to_load:
+		load_actions(file)
+	
+	#load_actions("cards/test-scene1")
+	#load_actions("cards/scene2")
+	#load_actions("cards/test-repeat")
 	
 	if actions_data.is_empty():
 		push_error("ActionStateMachine: Could not load actions")

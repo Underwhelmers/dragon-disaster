@@ -1,7 +1,12 @@
 {
-  "initial_state": [
-	"scene 1 active",
-	"in progress",
-	"game just started"
-  ]
+	"initial_state": [
+		"game intro active",
+		"in progress",
+		"location:nowhere"
+	],
+	"files_to_load": [
+		"cards/game-intro",
+		"cards/scene1",
+		"cards/scene2"
+	]
 }
