@@ -32,9 +32,13 @@ func clear_all_signals() -> void:
 		for conn in get_signal_connection_list(sig_name):
 			disconnect(sig_name, conn["callable"])  # Keys: "signal"(Signal), "callable", "flags"
 
+func _hard_close_game():
+	get_tree().quit()
+
 signal begin_run;
 signal pj_features;
 signal pj_set;
+signal hard_close_game;
 
 func execute_signal(data: Array):
 	var script = data.pop_front()
@@ -42,5 +46,6 @@ func execute_signal(data: Array):
 		"pj_set": pj_set.emit(data)
 		"begin_run": begin_run.emit(data)
 		"pj_features": pj_features.emit(data)
+		"hard_close_game": _hard_close_game()
 		"restart": _restart()
 		_: print("Unknown script: ", script, data)
