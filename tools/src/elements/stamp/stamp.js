@@ -43,6 +43,7 @@ function renderEvents() {
   const list = UI.get('event-list');
   list.innerHTML = '';
   Object.keys(events).forEach(key => {
+    if (!key) return;
     const event = events[key];
     const stamp = document.createElement('div');
     stamp.className = 'stamp';

@@ -6,7 +6,10 @@ function add_wordList(divholder, list, title, placeholder) {
       taglist = cont;
       if (list) list.forEach(val => addArrayInput(cont, placeholder, val));
     }),
-    UI.make('button').textContent('New').on('click',() => addArrayInput(taglist, placeholder))
+    UI.make('button').textContent('New').on('click',(e) => {
+      e.preventDefault();
+      addArrayInput(taglist, placeholder);
+    })
   ).getElement();
   return mydiv;
 }

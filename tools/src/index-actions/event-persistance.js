@@ -4,6 +4,7 @@ function triggerInputLoad() {
 
 function loadEvents(file) {
   if (!file) return;
+  UI.get('filename').value = file.name.replace(/\.[^/.]+$/, "");
 
   const reader = new FileReader();
   reader.onload = (ev) => {
@@ -26,13 +27,14 @@ function loadEvents(file) {
 }
 
 function downloadEvents() {
+  if (events[""]) events[""] = undefined;  
   const jsonEvents = JSON.stringify(events, parseCustomValues, 2);
   const blob = new Blob([jsonEvents], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
 
   UI.make('a').execute(a => {
     a.href = url;
-    a.download = 'events.json';
+    a.download = UI.get('filename').value + '.json'; //'events.json';
     a.click();
   });
   

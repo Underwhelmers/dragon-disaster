@@ -1,8 +1,11 @@
 window.onclick = (event) => { 
   // click outside when stamp is open.
-  if (event.target === modal) {
+  if (event.target !== modal) return;
+  
+  if (form.checkValidity())
     closeStamp();
-  } 
+  else 
+    form.reportValidity();
 };
 
 form.onsubmit = (e) => {
