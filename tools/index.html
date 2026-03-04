@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Stamp Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="controls">
+        <button id="add-event">Add New Event</button>
+        <button id="load-json">Load JSON</button>
+        <input type="file" id="file-input" accept=".json" style="display:none;">
+        <button id="download-json">Download JSON</button>
+    </div>
+    <div id="event-list"></div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">x</span>
+            <form id="event-form">
+                <div class="oneline">
+                    <label for="event-key" class="lab-h2">Edit Event: </label>
+                    <input type="text" id="event-key" required>
+                </div>
+
+
+                <div class="oneline" style="gap: 10px;">
+                    <div>
+                        <label for="event-text">Text:</label>
+                        <textarea id="event-text" required></textarea>
+                    </div>
+                    <div style="flex: 1; align-self: stretch;">
+                        &nbsp;
+                        <div class="option-category" style="margin-top: 15px;">
+                            <label><input type="checkbox" id="is-parametrized"> Parametrized Event</label>
+                            <div id="params-section" style="display:none;">
+                                <label>Parameters:</label>
+                                <div id="params-list"></div>
+                                <button type="button" id="add-param">Add Parameter</button>
+                            </div>
+                        </div>
+                        <div class="option-category" style="flex: 1;">
+                            <label>Requirements:</label>
+                            <div id="req-list" class="tag-holder"></div>
+                        </div>
+                        <div class="option-category" style="flex: 1;">
+                            <label>Always triggers:</label>
+                            <div id="all-trig-list" class="tag-holder"></div>
+                        </div>
+                        <div class="option-category" style="flex: 1;">
+                            <label>Always adds:</label>
+                            <div id="all-add-list" class="tag-holder"></div>
+                        </div>
+                        <div class="option-category" style="flex: 1;">
+                            <label>Always removes:</label>
+                            <div id="all-remov-list" class="tag-holder"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <label>Options:</label>
+                <div id="ops-list"></div>
+                <button type="button" id="add-op">Add Option</button>
+
+                <button type="submit">Save Event</button>
+                <button type="button" id="delete-event-btn" style="background:#c0392b; display:none;">Delete event</button>
+            </form>
+        </div>
+
+        <div id="modal-tag-pool" class="modal-tag-pool">
+            <div style="display: flex; align-items: center; ">
+                <h4 style="flex: 1; padding-top: 5px;">Tags created</h4>
+                <button id="modal-tag-pool-new-tag" type="button" style="padding: 5px;">+</button>
+            </div>
+            <div id="modal-tag-cloud" class="tag-cloud"></div>
+        </div>
+    </div>
+    
+    <script src="src/core/UI.js"></script> <!-- REQUIRED FIRST LOAD -->
+    <script src="src/core/consts.js"></script> <!-- REQUIRED SECOND LOAD -->
+
+    <script src="src/elements/stamp/load-form-stamp.js"></script>
+    <script src="src/elements/stamp/save-form-stamp.js"></script>
+    <script src="src/elements/stamp/stamp.js"></script>
+
+    <script src="src/elements/event-option.js"></script>
+    <script src="src/elements/event-param.js"></script>
+    <script src="src/elements/general-tag-pool.js"></script>
+    <script src="src/elements/tag-holder.js"></script>
+    <script src="src/elements/tag.js"></script>
+    <script src="src/elements/word-holder.js"></script>
+
+    <script src="src/index-actions/handlers.js"></script>
+    <script src="src/index-actions/event-persistance.js"></script>
+        
+    <script src="src/init.js"></script> <!-- REQUIRED LAST LOAD -->
+</body>
+</html>

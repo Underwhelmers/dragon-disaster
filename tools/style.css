@@ -1,0 +1,439 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stamp {
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.stamp::before {
+    content: "Stamp";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #ffcc00;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.stamp h3 {
+    margin-top: 0;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+.stamp p {
+    font-size: 14px;
+}
+
+.stamp ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stamp li {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.stamp li::before {
+    content: "- ";
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin:auto;
+    margin-left: 3%;
+    margin-right: 28%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 64%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 360px;
+    height: 450px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    
+    color: #e922ad;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.array-input { display: flex; align-items: flex-start; margin-bottom: 10px; }
+.array-input input { flex:1; min-width: 0; }
+.array-input button { padding: 5px; white-space: nowrap; }
+
+.nested-object {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.option-category {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+.btnrmv {
+  min-width: 75px;
+}
+
+.oneline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lab-h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.oneline input[type="text"] {
+  flex: 1;
+  margin: 0;
+}
+
+/* TAGS  */
+.tag-holder {
+  min-height: 25px;
+  min-width: 180px;
+  padding: 6px;
+  border: 1px dashed #555;
+  border-radius: 6px;
+  background: #222;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  transition: all 0.12s;
+}
+
+.tag-holder.drag-over {
+  border-color: #ff6b6b;
+  background: #2a1a1a;
+  box-shadow: 0 0 0 2px #ff444488;
+}
+
+.tag-chip {
+  background: #34495e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: grab;
+  user-select: none;
+  border: 1px solid #4a6a88;
+}
+
+.tag-chip.negated {
+  background: #632626;           /* darker red for "NOT" feeling */
+  border-color: #c0392b;
+}
+
+.tag-negate {
+  font-weight: bold;
+  color: #ff6b6b;
+  cursor: pointer;
+  min-width: 12px;
+  text-align: center;
+  user-select: none;
+}
+
+.tag-negate:hover {
+  color: #ff4444;
+  transform: scale(1.2);
+}
+
+.tag-name {
+  flex: 1;
+}
+
+.tag-chip.dragging {
+  opacity: 0.5;
+  transform: scale(1.05);
+}
+
+.tag-remove {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-left: 4px;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.tag-remove:hover {
+  color: #ff4444;
+}
+
+
+/*  more tags  */
+.modal-tag-pool {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 25%;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(20, 20, 30, 0.92);
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  z-index: 2002; /* just above modal backdrop */
+  backdrop-filter: blur(4px);
+}
+
+.modal-tag-pool h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.95em;
+  color: #aaa;
+  text-align: center;
+}
+.modal-tag-pool button {
+  text-align: center;
+}
+
+.modal.active ~ .modal-tag-pool {
+  display: block;             /* show when modal has .active class */
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rem-op-btn {
+  display: flex;
+  margin-left: auto;
+  background-color: #ff6b6b;
+}
+.rem-op-btn:hover {
+  background-color: #ff4444;
+}
+
+
+
+/*  SIDE PICKER  */
+.side-picker {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  /*
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+  */
+  font-size: 0.92rem;
+  user-select: none;
+}
+
+.side-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.13s ease;
+  font-weight: 600;
+  position: relative;
+}
+
+.side-btn input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.side-btn::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  order: 1;
+}
+
+.side-left {
+  flex-direction: row; /* text → circle */
+}
+
+.side-left::before {
+  order: 2; /* circle after text */
+  margin-left: 8px;
+}
+.side-right {
+  flex-direction: row-reverse;   /* circle ← text */
+  justify-content: flex-end;
+}
+
+.side-right::before {
+  order: 1; /* circle before text in reversed row */
+  margin-right: 8px;
+}
+
+
+.side-btn:hover {
+  background: #a7a7b9;
+}
+
+.side-btn:hover::before {
+  border-color: #000000;
+}
+
+/*                                      */
+/* When selected — main pink glow + gradient */
+.side-btn:has(input[type="radio"]:checked) {
+  background: linear-gradient(145deg, #ff69b4, #c71585);   /* hotpink → deeppink */
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 105, 180, 0.7);           /* subtle pink halo on text */
+  box-shadow: 
+    0 0 18px rgba(255, 105, 180, 0.55),
+    inset 0 1px 4px rgba(255, 255, 255, 0.25);             /* inner gloss */
+  transition: all 0.18s ease;
+}
+
+/* The little radio dot — now a juicy glowing pink pearl */
+.side-btn:has(input[type="radio"]:checked)::before {
+  background: #ff1493;                                      /* deep pink */
+  border-color: #ff69b4;                                    /* lighter hotpink rim */
+  box-shadow: 
+    inset 0 0 0 3px #1a1a1e,
+    0 0 14px rgba(255, 20, 147, 0.8);                      /* outer pink bloom */
+  transition: all 0.18s ease;
+}
+
+/* Left side flavor — softer "good girl" pink */
+.side-left:has(input:checked) {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: linear-gradient(90deg, #ff8dc7, #ff69b4);     /* candy → hotpink */
+  color: white;
+  transition: all 0.18s ease;
+}
+
+/* Right side flavor — more dominant, deeper, "take it" pink */
+.side-right:has(input:checked) {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: linear-gradient(90deg, #c71585, #8b008b);     /* deeppink → darkmagenta */
+  color: #fff0f5;                                           /* very pale pinkish white for contrast */
+  transition: all 0.18s ease;
+}
+
+/* Bonus: hover tease (even when not selected) */
+.side-btn:hover:not(:has(input:checked)) {
+  background: rgba(255, 105, 180, 0.15);
+  color: #ff69b4;
+  border-color: rgba(255, 105, 180, 0.4);
+  transition: all 0.18s ease;
+}
+
+/* Active press — make it feel like you're really pressing her button */
+.side-btn:active {
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.6);
+  transition: all 0.18s ease;
+}
