@@ -5,8 +5,8 @@ var rng := RandomNumberGenerator.new()
 
 func _init():
 	load_talk("npc/triggers-responses")
-	if talk_data.is_empty():
-		push_error("Npc response data failed to load.")
+	#if talk_data.is_empty():
+	#	push_error("Npc response data failed to load.")
 
 func restart():
 	talk_data = {}

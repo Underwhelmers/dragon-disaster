@@ -5,7 +5,7 @@ func load_json(path: String) -> Dictionary:
 		push_error("file does not exists: ", path); 
 		return {}
 	
-	print("loading: ", path)
+	#print("loading: ", path)
 	var file = FileAccess.open(path, FileAccess.READ)
 	var json = JSON.parse_string(file.get_as_text())
 	file.close()
