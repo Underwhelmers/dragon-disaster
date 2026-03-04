@@ -5,6 +5,7 @@
 		"location:nowhere"
 	],
 	"files_to_load": [
+		"cards/consent-card",
 		"cards/game-intro",
 		"cards/scene1",
 		"cards/scene2"
