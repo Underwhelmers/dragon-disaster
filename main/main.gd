@@ -22,8 +22,8 @@ func next_card():
 	var action = ActionStateMachine.pop_valid_action()
 	
 	var ops = ActionStateMachine.get_valid_ops(action.name)
-	leftop = ops[0]
-	rightop = ops[1]
+	leftop = ops.left
+	rightop = ops.right
 	
 	var line = ""
 	for t in ActionStateMachine.triggers:

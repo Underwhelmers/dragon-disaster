@@ -132,29 +132,44 @@ func pop_valid_action():
 	pending_actions.erase(top.name)
 	return top
 
-func get_valid_ops(action_name: String) -> Array:
+func get_valid_ops(action_name: String) -> Dictionary:
 	if action_name == "watching the aviss":
 		return aviss_action()
 	
 	if not actions_data.has(action_name):
 		push_error("Action not found: " + action_name)
-		return []
+		return {}
 
 	var ops: Array = actions_data[action_name].get("ops", [])
-	var result: Array = []
+	var resultL: Array = []
+	var resultR: Array = []
+	var resultOth: Array = []
 
 	for op in ops:
 		if op.has("req"):
 			if not has_all(op["req"]):
 				continue
-		result.append(op)
+		
+		if not op.has("order"): op["order"] = op.get("req",[]).size()
+		
+		if op.has("side") and op["side"] == "left": resultL.append(op)
+		elif op.has("side") and op["side"] == "right": resultR.append(op)
+		else: resultOth.append(op)
 	
-	result.shuffle()
-	result.sort_custom(func(a,b): 
-		return a.get("req",[]).size() > b.get("req",[]).size()
-	)
-	for it in result: print(it)
-	return result
+	resultOth.shuffle()
+	resultL.sort_custom(sort_opts)
+	resultR.sort_custom(sort_opts)
+	
+	return {
+		"left": take_or_random(resultL,resultOth),
+		"right": take_or_random(resultR,resultOth)
+	}
+
+func take_or_random(arr: Array, fallback: Array):
+	return fallback.pick_random() if arr.is_empty() else arr.pop_front()
+
+func sort_opts(a,b) -> bool:
+	return a.order > b.order
 
 func execute_op(op: Dictionary):
 	triggers.clear()
