@@ -1,6 +1,6 @@
 {
-	"game intro: intro": {
-		"text": "Before the adventure begins.\n\nThis game contains A LOT of explicit detailed 18+ situations.\n\nSo you MUST be 18+",
+	"game intro: step 1": {
+		"text": "Let's set the scene:\n\nYou are an adventurer, and in this day you have finally reached your destination.\n\nIn front of you there is ...",
 		"req": [
 			"game intro active",
 			"in progress",
@@ -8,38 +8,10 @@
 		],
 		"ops": [
 			{
-				"text": "I am 18+",
-				"eff": {
-					"triggers": [
-						"intro done"
-					]
-				},
-				"side": "right"
-			},
-			{
-				"text": "I am not 18+",
-				"eff": {
-					"exec": [
-						"hard_close_game"
-					]
-				},
-				"side": "left"
-			}
-		]
-	},
-	"game intro: step 1": {
-		"text": "Let's set the scene:\n\nYou are an adventurer, and in this __________ you have finally reached your destination.",
-		"req": [
-			"game intro active",
-			"in progress",
-			"intro done"
-		],
-		"ops": [
-			{
-				"text": "... star filled night ...",
+				"text": "... A huge cave.\n\nWhere the dragon I have been folowing is located,\nif the rumors are to be believed.",
 				"eff": {
 					"adds": [
-						"daytime:night"
+						"location:cave"
 					],
 					"triggers": [
 						"step 1 done"
@@ -48,10 +20,10 @@
 				"side": "left"
 			},
 			{
-				"text": "... bright day ...",
+				"text": "... An imposing castle.\n\nThe same one that has been ocupied by the deadly dragon for the last five years.",
 				"eff": {
 					"adds": [
-						"daytime:day"
+						"location:castle"
 					],
 					"triggers": [
 						"step 1 done"
@@ -62,7 +34,7 @@
 		]
 	},
 	"game scene: step 2": {
-		"text": "It has been a long time, but on the 5th __________ since you started your journey you are finally here.",
+		"text": "Your journey was not easy, and lot's of times you thought about \ngiving up.\n\nBut every time, \nyou go back to, \n\"that day\".",
 		"req": [
 			"game intro active",
 			"in progress",
@@ -70,10 +42,10 @@
 		],
 		"ops": [
 			{
-				"text": "... winter ...",
+				"text": "Every time I remember that day, my blood boils.\n\n(Path of resolution)",
 				"eff": {
 					"adds": [
-						"season:winter"
+						"pj is dominant"
 					],
 					"triggers": [
 						"step 2 done"
@@ -82,16 +54,85 @@
 				"side": "left"
 			},
 			{
-				"text": "... summer ...",
+				"text": "The single memory of that day is enough to send shivers down my spine.\n\n(Path of fear)",
 				"eff": {
 					"adds": [
-						"season:summer"
+						"pj is submissive"
 					],
 					"triggers": [
 						"step 2 done"
 					]
 				},
 				"side": "right"
+			}
+		]
+	},
+	"game intro: step 3": {
+		"text": "That day... That dreadful day when the dragon destroyed your fields.\n\nThe hard work of generation in your family turned to charcoal.\n\nAnd the imposing dragon standing in front of you...",
+		"req": [
+			"game intro active",
+			"in progress",
+			"step 2 done"
+		],
+		"ops": [
+			{
+				"text": "I'll never forget!\n\nHow could I...\n\nThe size of her pussy was enough to swallow my whole head...",
+				"eff": {
+					"adds": [
+						"dragon is female"
+					],
+					"triggers": [
+						"step 3 done"
+					]
+				},
+				"side": "left"
+			},
+			{
+				"text": "I'll never forget!\n\nHow could I...\n\nHis dick was as long as myself and warm as a chimney...",
+				"eff": {
+					"adds": [
+						"dragon is male"
+					],
+					"triggers": [
+						"step 3 done"
+					]
+				},
+				"side": "right"
+			}
+		]
+	},
+	"game intro: step 4": {
+		"text": "Enough of that!\n\nStop daydreaming, clean the drool from your face. \n\nYou must start right away with your objective!\n\nMeet that dragon face to face again!",
+		"req": [
+			"game intro active",
+			"in progress",
+			"step 3 done"
+		],
+		"ops": [
+			{
+				"text": "YES!\n\nI won't stop for anything!",
+				"eff": {
+					"removes": [
+						"in progress",
+						"game intro active"
+					],
+					"triggers": [
+						"step 4 done"
+					]
+				},
+				"side": "right"
+			},
+			{
+				"text": "I believe I made a mistake.   \nCould we start over?",
+				"eff": {
+					"triggers": [
+						"step 4 done"
+					],
+					"exec": [
+						"restart"
+					]
+				},
+				"side": "left"
 			}
 		]
 	}

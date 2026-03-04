@@ -1,0 +1,9 @@
+{
+  "consent card: intro": {
+    "order" : 100,
+    "text": "Before the adventure begins.\n\nThis game contains A LOT of explicit detailed 18+ situations.\n\nSo you MUST be 18+",
+    "req": [
+      "requires consent"
+    ]
+  }
+}
