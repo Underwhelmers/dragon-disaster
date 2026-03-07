@@ -1,17 +1,32 @@
 {
-	"initial_state": [
-		"game intro active",
-		"in progress",
-		"location:nowhere",
-		"requires consent"
-	],
-	"files_to_load": [
-		"cards/consent-card",
-		"cards/game-intro",
-		"cards/ev-bathroom"
-	],
-	"files_hiden": [
-		"cards/scene1",
-		"cards/scene2"
-	]
+	"game-consent": {
+		"initial_state": [
+			"requires consent"
+		],
+		"cards": [
+			"cards/consent/consent-card"
+		]
+	},
+	
+	"gamemode:jam-submission": {
+		"initial_state": [
+			"scene 1 active",
+			"in progress"
+		],
+		"cards": [
+			"cards/jam-ver/scene1",
+			"cards/jam-ver/scene2"
+		]
+	},
+	"gamemode:post-jam-game": {
+		"initial_state": [
+			"event:game-intro",
+			"location:nowhere",
+		],
+		"cards": [
+			"cards/consent-card",
+			"cards/game-intro",
+			"cards/ev-bathroom"
+		]
+	}
 }

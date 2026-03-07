@@ -5,20 +5,31 @@ var pending_actions: Dictionary = {}
 var state: Array = [] # your current tags
 var triggers: Array = [] # temporal triggered events
 var values: Dictionary = {}
+var gamemode_chosen: String = ""
 
 func _init():
 	var data := DataLoader.load_json_for("config/state-machine")
-	state = data.initial_state
+	data = data["game-consent"]
 	
-	for file in data.files_to_load:
+	state = data.initial_state
+	for file in data.cards:
+		load_actions(file)
+		
+	if actions_data.is_empty():
+		push_error("ActionStateMachine: Could not load actions for: game-consent")
+	
+
+func load_gamemode(gamemode: String) -> void:
+	var data := DataLoader.load_json_for("config/state-machine")
+	data = data["gamemode:"+gamemode]
+	
+	state = data.initial_state
+	for file in data.cards:
 		load_actions(file)
 	
-	#load_actions("cards/test-scene1")
-	#load_actions("cards/scene2")
-	#load_actions("cards/test-repeat")
-	
 	if actions_data.is_empty():
-		push_error("ActionStateMachine: Could not load actions")
+		push_error("ActionStateMachine: Could not load actions for: ", gamemode)
+	gamemode_chosen = gamemode
 
 func restart():
 	actions_data = {}
@@ -26,7 +37,8 @@ func restart():
 	state = []
 	triggers = []
 	values = {}
-	_init()
+	if gamemode_chosen != "":
+		load_gamemode(gamemode_chosen)
 
 func load_actions(path):
 	var raw := DataLoader.load_json_for(path)
