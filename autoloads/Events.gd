@@ -56,4 +56,5 @@ func _hard_close_game():
 	get_tree().quit()
 	
 func _exit_game():
+	ActionStateMachine.gamemode_chosen = ""
 	get_tree().change_scene_to_file("res://scenes/main-menu/main-menu.tscn")

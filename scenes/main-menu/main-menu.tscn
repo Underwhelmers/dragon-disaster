@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c483j3ch30kua"]
 
+[ext_resource type="Script" uid="uid://dbq4yp08g6ygr" path="res://scenes/main-menu/main-menu.gd" id="1_7w8pu"]
+[ext_resource type="PackedScene" uid="uid://dgcgs7tauh425" path="res://scenes/main-menu/button.tscn" id="2_nisa4"]
+
 [node name="MainMenu" type="Control" unique_id=1443679579]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7w8pu")
+button_scene = ExtResource("2_nisa4")
+
+[node name="ButtonContainer" type="HFlowContainer" parent="." unique_id=390563492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = 111.0
+offset_right = -926.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+alignment = 1

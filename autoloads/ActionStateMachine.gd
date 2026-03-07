@@ -5,11 +5,13 @@ var pending_actions: Dictionary = {}
 var state: Array = [] # your current tags
 var triggers: Array = [] # temporal triggered events
 var values: Dictionary = {}
+
+var config : Dictionary
 var gamemode_chosen: String = ""
 
 func _init():
-	var data := DataLoader.load_json_for("config/state-machine")
-	data = data["game-consent"]
+	config = DataLoader.load_json_for("config/state-machine")
+	var data = config["game-consent"]
 	
 	state = data.initial_state
 	for file in data.cards:
@@ -20,15 +22,15 @@ func _init():
 	
 
 func load_gamemode(gamemode: String) -> void:
-	var data := DataLoader.load_json_for("config/state-machine")
-	data = data["gamemode:"+gamemode]
+	var data = config["gamemode:"+gamemode]
 	
-	state = data.initial_state
+	state = data.initial_state.duplicate()
 	for file in data.cards:
 		load_actions(file)
 	
 	if actions_data.is_empty():
 		push_error("ActionStateMachine: Could not load actions for: ", gamemode)
+		
 	gamemode_chosen = gamemode
 
 func restart():
@@ -37,6 +39,7 @@ func restart():
 	state = []
 	triggers = []
 	values = {}
+	
 	if gamemode_chosen != "":
 		load_gamemode(gamemode_chosen)
 
@@ -158,14 +161,14 @@ func pop_valid_action():
 func get_valid_ops(action_name: String) -> Dictionary:
 	if action_name == "watching the aviss":
 		return {
-			"left" : { "text": "Let's go back...", "eff": { "exec":["restart"] } },
-			"right": { "text": "Let's go back...", "eff": { "exec":["restart"] } }
+			"left" : { "text": "I want another story...", "eff": { "exec":["exit_game"] } },
+			"right": { "text": "I'll try something new...", "eff": { "exec":["restart"] } }
 		}
 	
 	if not actions_data.has(action_name):
 		push_error("Action not found: " + action_name)
 		return {
-			"left" : { "text": "Reset...", "eff": { "exec":["restart"] } },
+			"left" : { "text": "Leave...", "eff": { "exec":["exit_game"] } },
 			"right": { "text": "Reset...", "eff": { "exec":["restart"] } }
 		}
 
@@ -195,7 +198,7 @@ func get_valid_ops(action_name: String) -> Dictionary:
 	}
 
 func take_or_random(arr: Array, fallback: Array):
-	return fallback.pick_random() if arr.is_empty() else arr.pop_front()
+	return fallback.pop_front() if arr.is_empty() else arr.pop_front()
 
 func sort_opts(a,b) -> bool:
 	return a.order > b.order
