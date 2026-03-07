@@ -13,7 +13,6 @@ config_version=5
 config/name="Dragon disaster"
 run/main_scene="uid://b1axr13hy82te"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
