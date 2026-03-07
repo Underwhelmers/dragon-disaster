@@ -175,7 +175,8 @@
   "game-intro: chuck path 2": {
 	"text": "Wait a second...",
 	"req": [
-      "event:game-intro"
+	  "event:game-intro",
+      "chuck path 2"
 	],
 	"ops": [
 	  {
@@ -314,7 +315,7 @@
 		"text": "*dead noices*\n\n(Game over)",
 		"eff": {
 		  "exec": [
-            ""
+            "restart"
 		  ]
 		},
 		"side": "left"
@@ -350,7 +351,7 @@
 		"text": "Nop!\n\nThat is borring.\n\nSee ya!\n\n(Exit game)",
 		"eff": {
 		  "exec": [
-            "hard_close_game"
+            "exit_game"
 		  ]
 		},
 		"side": "right"
