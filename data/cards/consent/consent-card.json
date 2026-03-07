@@ -11,6 +11,9 @@
 		"eff": {
 		  "removes": [
             "requires consent"
+		  ],
+		  "exec": [
+            "exit_game"
 		  ]
 		},
 		"side": "right"
