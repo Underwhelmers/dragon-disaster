@@ -94,7 +94,7 @@ func get_valid_actions() -> Array:
 	for action_name in pending_actions.keys():
 		var action = actions_data[action_name]
 		
-		if action.has("req") and not has_all(action["req"]):
+		if not has_all(action.get("req",[])):
 			continue
 		
 		result.append({
@@ -126,7 +126,7 @@ func pop_valid_action():
 		result.append({
 			"name": action_name,
 			"text": action.get("text", ""),
-			"order": action.get("req",[]).size()
+			"order": action.get("order", action.get("req",[]).size())
 		})
 	
 	if result.size() == 0:
