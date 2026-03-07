@@ -43,7 +43,7 @@ function addOptionInput(op = new EventOption(), sharedTags = new EventOptionEffe
         add_tagList(subdiv1, tagSetExcluding(op.eff.removes , sharedTags.removes ), 'Removes');
         var execDiv = add_wordList(subdiv1, op.eff.exec, 'Scripts', '0:Script name, 1+:params value');
         execDiv.style.flex = '1';
-        execDiv.style.minWidth = '180px';
+        execDiv.style.minWidth = '360px';
         execDiv.style.minHeight = '38px';
       })
     ),

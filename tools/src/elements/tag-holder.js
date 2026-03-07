@@ -1,5 +1,5 @@
 function add_tagList(divholder, list, title) {
-  UI.make('div').class('option-category').childOf(divholder).withChilds(
+  UI.make('div').class('option-category').style({flex:"1"}).childOf(divholder).withChilds(
     UI.make('label').textContent(title+':'),
     UI.make('div').class(title.toLowerCase() + '-list','tag-holder').execute(cont => {
       makeTagHolderDroppable(cont);
@@ -32,5 +32,19 @@ function makeTagHolderDroppable(holder) {
     if (alreadyHas) return;
 
     addTagElm(holder, tagValue);
+  });
+
+  holder.addEventListener('dblclick', () => {
+    const inpt = UI.make('input').ofType('text').placeholder('new tag...').childOf(holder).focus()
+    .on('blur',() => {
+      if (inpt && inpt.value && inpt.value.trim() !== '')
+        addTagElm(holder, inpt.value.trim());
+      inpt.remove();
+    })
+    .on('keydown', e => {
+      if (e.key === 'Enter')  { e.preventDefault(); inpt.blur(); }
+      if (e.key === 'Escape') { e.preventDefault(); inpt.blur(); }
+    })
+    .getElement();
   });
 }

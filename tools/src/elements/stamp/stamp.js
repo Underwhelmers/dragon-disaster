@@ -27,6 +27,8 @@ function clearForm() {
 function openFormForNew() {
   currentEditingKey = null;
   clearForm();
+  UI.get('event-key').value = UI.get('filename').value + ": ";
+
   hideDeleteIfNewEvent();
   modal.style.display = 'block';
   showModalTagPool();
