@@ -16,6 +16,7 @@ function saveBoard() {
 }
 
 function loadBoard() {
+  board.innerHTML = '';
   const data = JSON.parse(localStorage.getItem("moodboard") || "[]");
 
   data.forEach(item => {
