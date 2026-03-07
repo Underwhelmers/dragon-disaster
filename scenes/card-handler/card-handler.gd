@@ -22,8 +22,8 @@ func next_card():
 	var action = ActionStateMachine.pop_valid_action()
 	
 	var ops = ActionStateMachine.get_valid_ops(action.name)
-	if not ops.left: printerr("Action: '", action.name, "' has no left option.")
-	if not ops.right: printerr("Action: '", action.name, "' has no right option.")
+	if not ops.left: push_error("Action: '", action.name, "' has no left option.")
+	if not ops.right: push_error("Action: '", action.name, "' has no right option.")
 		
 	leftop = ops.left
 	rightop = ops.right
