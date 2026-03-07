@@ -14,7 +14,7 @@ board.addEventListener('drop', e => {
 
   const files = e.dataTransfer.files;
   for (const file of files) {
-    if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
+    if (file.type.startsWith('image/')) {
       createMoodItem(file);
     }
   }
