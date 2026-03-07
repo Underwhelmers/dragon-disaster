@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Moodboard</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+	<h1>Moodboard</h1>
+	<div class="controls">
+		<button id="btn-clear">Clear All</button>
+		<button onclick="saveBoard()">Save</button>
+		<button onclick="loadBoard()">Load</button>
+	</div>
+</header>
+
+	<div id="board"></div>
+	<div id="dropzone">Drop images / screenshots here…</div>
+
+    <script src="src/core/UI.js"></script> <!-- REQUIRED FIRST LOAD -->
+    <script src="src/core/consts.js"></script> <!-- REQUIRED SECOND LOAD -->
+    
+	<script src="src/moodboard/save.js"></script>
+
+	<script src="src/stamp-actions/drag.js"></script>
+	<script src="src/stamp-actions/create.js"></script>
+
+    <script src="src/init.js"></script> <!-- REQUIRED LAST LOAD -->
+</body>
+</html>
