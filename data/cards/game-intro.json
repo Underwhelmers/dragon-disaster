@@ -113,8 +113,8 @@
 				"text": "YES!\n\nI won't stop for anything!",
 				"eff": {
 					"removes": [
-						"in progress",
-						"game intro active"
+						"game intro active",
+						"in progress"
 					],
 					"triggers": [
 						"step 4 done"

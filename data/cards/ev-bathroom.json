@@ -1,0 +1,135 @@
+{
+  "ev-bathroom: intro": {
+    "text": "While walking the castle you find something that calls your atention.\n\nThere is a room that seems \"less dusty\" than the rest of the castle.",
+    "req": [
+      "!in progress",
+      "location:castle"
+    ],
+    "ops": [
+      {
+        "text": "\"HERE I COME!\"\n\nI will recklessly and brainlessly burst into the room.\n\nBurst fist ask second, \nam I right?",
+        "eff": {
+          "adds": [
+            "draong is alert",
+            "in progress",
+            "event:ev-bathroom"
+          ],
+          "triggers": [
+            "describe room"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "This seems like a traveled space.\n\nI would like to investigate please.",
+        "eff": {
+          "adds": [
+            "in progress",
+            "event:ev-bathroom"
+          ],
+          "triggers": [
+            "investigate door"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-bathroom: describe room": {
+    "text": "The moment you step in, you get overwelmed by the smell of soap and \nthe damp warmness \nof steam.\n\nYour heart starts to pound hard in your chest.",
+    "req": [
+      "describe room",
+      "event:ev-bathroom"
+    ],
+    "ops": [
+      {
+        "text": "Are you telling me that they here?\n\nYES!! Ufff... \nCalm down...\nCalm down...\n\nSlow breaths...\n\nI walk calmly to the dense mist of steam. ",
+        "eff": {
+          "triggers": [
+            "get in the fog"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I don't hear anything...\n\nI would like to check my suroundings before moving forward.",
+        "eff": {
+          "triggers": [
+            "investigate bath"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-bathroom: investigate door": {
+    "text": "This seems to be a bathroom.\n\nThat explains the lack of dust.",
+    "req": [
+      "investigate door",
+      "event:ev-bathroom"
+    ],
+    "ops": [
+      {
+        "text": "Color me interested...\n\nLets dive into their throne.",
+        "eff": {
+          "triggers": [
+            "describe room"
+          ]
+        },
+        "side": "right"
+      },
+      {
+        "text": "I want to find them as fast as possible.\n\nI have no time to enter in there.\n\nI wasn't hoping they were taking a bath.\n\nShut up.",
+        "eff": {
+          "removes": [
+            "in progress",
+            "event:ev-bathroom"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  },
+  "ev-bathroom: investigate bath": {
+    "text": "The fog disipates.\n\nYou can see the gargantuan bath in the back.\n\nYour hopes flatline when you realize it's only full of hot water.",
+    "req": [
+      "event:ev-bathroom",
+      "investigate bath"
+    ],
+    "ops": [
+      {
+        "text": "I'll keep searching elsewhere.\n\nThey are in this castle...\n\nAnd I will find them...",
+        "eff": {
+          "removes": [
+            "event:ev-bathroom",
+            "in progress"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "So...\n\nIn other words, you are telling me that I have a unlimited supply of dragon-bathwater?\n\nInteresting...\n\nI'll get closer to the bath, for no particular reason...",
+        "eff": {
+          "triggers": [
+            "near the bath"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-bathroom: get in the fog": {
+    "text": "This room was not big enough for you to \nbarge in.\n\nSo as you faceplant to the gargantuan bathtub.\n\nYou sadly realize you are alone.\n\nBut it seems like the bath was used.",
+    "req": [
+      "get in the fog",
+      "event:ev-bathroom"
+    ],
+    "ops": [
+      {
+        "text": "",
+        "eff": {},
+        "side": "left"
+      }
+    ]
+  }
+}

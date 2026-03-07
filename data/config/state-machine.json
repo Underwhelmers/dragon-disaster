@@ -2,11 +2,15 @@
 	"initial_state": [
 		"game intro active",
 		"in progress",
-		"location:nowhere"
+		"location:nowhere",
+		"requires consent"
 	],
 	"files_to_load": [
 		"cards/consent-card",
 		"cards/game-intro",
+		"cards/ev-bathroom"
+	],
+	"files_hiden": [
 		"cards/scene1",
 		"cards/scene2"
 	]

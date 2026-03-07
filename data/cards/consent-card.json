@@ -1,9 +1,32 @@
 {
-  "consent card: intro": {
-    "order" : 100,
-    "text": "Before the adventure begins.\n\nThis game contains A LOT of explicit detailed 18+ situations.\n\nSo you MUST be 18+",
-    "req": [
+  "consent card: consent": {
+	"order": 100,
+	"text": "Before the adventure begins.\n\nThis game contains A LOT of explicit detailed 18+ situations.\n\nSo you MUST be 18+\n\n\n\n<--                      -->",
+	"req": [
       "requires consent"
-    ]
+	],
+	"ops": [
+	  {
+		"text": "I am 18+",
+		"eff": {
+		  "removes": [
+            "requires consent"
+		  ]
+		},
+		"side": "right"
+	  },
+	  {
+		"text": "I am not 18+",
+		"eff": {
+		  "removes": [
+            "requires consent"
+		  ],
+		  "exec": [
+            "hard_close_game"
+		  ]
+		},
+		"side": "left"
+	  }
+	]
   }
 }
