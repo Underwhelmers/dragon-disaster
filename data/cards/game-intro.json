@@ -1,360 +1,360 @@
 {
   "game scene: step 2": {
-    "text": "Exactly!\n\nYour journey was not easy, and lot's of times you thought about \ngiving up.\n\nBut every time, \nyou go back to, \n\"that day\".",
-    "req": [
-      "event:game-intro",
+	"text": "Exactly!\n\nYour journey was not easy, and lot's of times you thought about \ngiving up.\n\nBut every time, \nyou go back to, \n\"that day\".",
+	"req": [
+	  "event:game-intro",
       "intro done"
-    ],
-    "ops": [
-      {
-        "text": "Every time I remember that day, my blood boils.\n\n(Path of resolution)",
-        "eff": {
-          "adds": [
+	],
+	"ops": [
+	  {
+		"text": "Every time I remember that day, my blood boils.\n\n(Path of resolution)",
+		"eff": {
+		  "adds": [
             "pj is dominant"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "step 2 done"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "The single memory of that day is enough to send shivers down my spine.\n\n(Path of fear)",
-        "eff": {
-          "adds": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "The single memory of that day is enough to send shivers down my spine.\n\n(Path of fear)",
+		"eff": {
+		  "adds": [
             "pj is submissive"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "step 2 done"
-          ]
-        },
-        "side": "right"
-      }
-    ]
+		  ]
+		},
+		"side": "right"
+	  }
+	]
   },
   "game intro: step 3": {
-    "text": "That day... That dreadful day when the dragon destroyed your fields.\n\nThe hard work of generation in your family turned to charcoal.\n\nAnd the imposing dragon standing in front of you...",
-    "req": [
-      "step 2 done",
+	"text": "That day... That dreadful day when the dragon destroyed your fields.\n\nThe hard work of generation in your family turned to charcoal.\n\nAnd the imposing dragon standing in front of you...",
+	"req": [
+	  "step 2 done",
       "event:game-intro"
-    ],
-    "ops": [
-      {
-        "text": "I'll never forget!\n\nHow could I...\n\nThe size of her pussy was enough to swallow my whole head...",
-        "eff": {
-          "adds": [
+	],
+	"ops": [
+	  {
+		"text": "I'll never forget!\n\nHow could I...\n\nThe size of her pussy was enough to swallow my whole head...",
+		"eff": {
+		  "adds": [
             "dragon is female"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "step 3 done"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "I'll never forget!\n\nHow could I...\n\nHis dick was as long as myself and warm as a chimney...",
-        "eff": {
-          "adds": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "I'll never forget!\n\nHow could I...\n\nHis dick was as long as myself and warm as a chimney...",
+		"eff": {
+		  "adds": [
             "dragon is male"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "step 3 done"
-          ]
-        },
-        "side": "right"
-      }
-    ]
+		  ]
+		},
+		"side": "right"
+	  }
+	]
   },
   "game intro: step 4": {
-    "text": "That image has since been imprinted in your very soul!\n\nYet you must stop daydreaming! ... and clean the drool from your face...\n\nCome back to your sences! \nYou have reached the dragon's realm.",
-    "req": [
-      "step 3 done",
+	"text": "That image has since been imprinted in your very soul!\n\nYet you must stop daydreaming! ... and clean the drool from your face...\n\nCome back to your sences! \nYou have reached the dragon's realm.",
+	"req": [
+	  "step 3 done",
       "event:game-intro"
-    ],
-    "ops": [
-      {
-        "text": "Let's get some dragon pussy!",
-        "eff": {
-          "adds": [
+	],
+	"ops": [
+	  {
+		"text": "Let's get some dragon pussy!",
+		"eff": {
+		  "adds": [
             "event:none"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "step 4 done"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "dragon is female"
-        ],
-        "side": "right"
-      },
-      {
-        "text": "I believe I made a mistake.   \nCould we start over?",
-        "eff": {
-          "triggers": [
+		],
+		"side": "right"
+	  },
+	  {
+		"text": "I believe I made a mistake.   \nCould we start over?",
+		"eff": {
+		  "triggers": [
             "step 4 done"
-          ],
-          "exec": [
+		  ],
+		  "exec": [
             "restart"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "Let's get some dragon dick!",
-        "eff": {
-          "triggers": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "Let's get some dragon dick!",
+		"eff": {
+		  "triggers": [
             "step 4 done"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "dragon is male"
-        ],
-        "side": "right"
-      }
-    ]
+		],
+		"side": "right"
+	  }
+	]
   },
   "game-intro: intro": {
-    "text": "Let's set the scene:\n\nYou are an adventurer in search of a dragon.",
-    "req": [
+	"text": "Let's set the scene:\n\nYou are an adventurer in search of a dragon.",
+	"req": [
       "event:game-intro"
-    ],
-    "ops": [
-      {
-        "text": "Cliche!\n\nI want to be searching a three legged treant witch sap is the youth elixir.\n\nAnd it will be called Norris \nbecause you must chuck their sap to live forever.",
-        "eff": {
-          "triggers": [
+	],
+	"ops": [
+	  {
+		"text": "Cliche!\n\nI want to be searching a three legged treant witch sap is the youth elixir.\n\nAnd it will be called Norris \nbecause you must chuck their sap to live forever.",
+		"eff": {
+		  "triggers": [
             "chuck path 1"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "Yes!!\n\nI am aware of this fact.\n\nThat dragon is not ready for the arrival of Aanon the knight!",
-        "eff": {
-          "triggers": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "Yes!!\n\nI am aware of this fact.\n\nThat dragon is not ready for the arrival of Aanon the knight!",
+		"eff": {
+		  "triggers": [
             "intro done"
-          ]
-        },
-        "side": "right"
-      }
-    ]
+		  ]
+		},
+		"side": "right"
+	  }
+	]
   },
   "game-intro: chuck path 1": {
-    "text": "Uhhmmm...",
-    "req": [
-      "event:game-intro",
+	"text": "Uhhmmm...",
+	"req": [
+	  "event:game-intro",
       "chuck path 1"
-    ],
-    "ops": [
-      {
-        "text": "The adventure will start in my house in a tree.\n\nNorris was my best friend since time immemorial. \n\nBut one day a hunter came by and took him away.",
-        "eff": {
-          "adds": [
+	],
+	"ops": [
+	  {
+		"text": "The adventure will start in my house in a tree.\n\nNorris was my best friend since time immemorial. \n\nBut one day a hunter came by and took him away.",
+		"eff": {
+		  "adds": [
             "norris is friend"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "chuck path 2"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "He would come out of nowhere and slap me to a duel.\n\nBut when the day and time came he left.\n\nAnd by the rules of this world that means he took my dignity with him.",
-        "eff": {
-          "adds": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "He would come out of nowhere and slap me to a duel.\n\nBut when the day and time came he left.\n\nAnd by the rules of this world that means he took my dignity with him.",
+		"eff": {
+		  "adds": [
             "norris is enemy"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "chuck path 2"
-          ]
-        },
-        "side": "right"
-      }
-    ]
+		  ]
+		},
+		"side": "right"
+	  }
+	]
   },
   "game-intro: chuck path 2": {
-    "text": "Wait a second...",
-    "req": [
+	"text": "Wait a second...",
+	"req": [
       "event:game-intro"
-    ],
-    "ops": [
-      {
-        "text": "....\n\nSorry, did you say something?\n\nI was thinking about Norris.",
-        "eff": {
-          "triggers": [
+	],
+	"ops": [
+	  {
+		"text": "....\n\nSorry, did you say something?\n\nI was thinking about Norris.",
+		"eff": {
+		  "triggers": [
             "bail out of chuck"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "Since I couldn't let him keep my dignity, I started my quest for revenge.\n\nBut once I found him I realized that he has sold the dignity he stole from me.\n\nAll to keep his family fed.",
-        "eff": {
-          "triggers": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "Since I couldn't let him keep my dignity, I started my quest for revenge.\n\nBut once I found him I realized that he has sold the dignity he stole from me.\n\nAll to keep his family fed.",
+		"eff": {
+		  "triggers": [
             "chuck path 3"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "norris is enemy"
-        ],
-        "side": "right"
-      },
-      {
-        "text": "From thick and thin I would follow the tracks.\n\nLeaving my heart and soul in the chase of my only friend.",
-        "eff": {
-          "triggers": [
+		],
+		"side": "right"
+	  },
+	  {
+		"text": "From thick and thin I would follow the tracks.\n\nLeaving my heart and soul in the chase of my only friend.",
+		"eff": {
+		  "triggers": [
             "chuck path 3"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "norris is friend"
-        ],
-        "side": "right"
-      }
-    ]
+		],
+		"side": "right"
+	  }
+	]
   },
   "game-intro: chuck path 3": {
-    "text": "Can you hear me?...",
-    "req": [
-      "event:game-intro",
+	"text": "Can you hear me?...",
+	"req": [
+	  "event:game-intro",
       "chuck path 3"
-    ],
-    "ops": [
-      {
-        "text": "But what I was not expecting is that since Norris stopped giving me his sap, I had my days counted.",
-        "eff": {
-          "triggers": [
+	],
+	"ops": [
+	  {
+		"text": "But what I was not expecting is that since Norris stopped giving me his sap, I had my days counted.",
+		"eff": {
+		  "triggers": [
             "chuck path 4"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "norris is friend"
-        ],
-        "side": "right"
-      },
-      {
-        "text": "Since he had no more my dignity, I started chasing him so I could steal his dignity.\n\nThis proved too much for me, since he could live forever, and having three legs made him always be a step ahead.",
-        "eff": {
-          "triggers": [
+		],
+		"side": "right"
+	  },
+	  {
+		"text": "Since he had no more my dignity, I started chasing him so I could steal his dignity.\n\nThis proved too much for me, since he could live forever, and having three legs made him always be a step ahead.",
+		"eff": {
+		  "triggers": [
             "chuck path 4"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "norris is enemy"
-        ],
-        "side": "right"
-      },
-      {
-        "text": "...\n\nYeah I can hear you.\n\nWhat made you believe I couldn't?.",
-        "eff": {
-          "triggers": [
+		],
+		"side": "right"
+	  },
+	  {
+		"text": "...\n\nYeah I can hear you.\n\nWhat made you believe I couldn't?.",
+		"eff": {
+		  "triggers": [
             "bail out of chuck"
-          ]
-        },
-        "side": "left"
-      }
-    ]
+		  ]
+		},
+		"side": "left"
+	  }
+	]
   },
   "game-intro: chuck path 4": {
-    "text": "So, what happened next?...",
-    "req": [
-      "event:game-intro",
+	"text": "So, what happened next?...",
+	"req": [
+	  "event:game-intro",
       "chuck path 4"
-    ],
-    "ops": [
-      {
-        "text": "What do you mean?\n\nHow would I know what happens in the future?\n\nI am just an adventurer seeking a dragon.\n\nCould you please continue with what you were saying?",
-        "eff": {
-          "triggers": [
+	],
+	"ops": [
+	  {
+		"text": "What do you mean?\n\nHow would I know what happens in the future?\n\nI am just an adventurer seeking a dragon.\n\nCould you please continue with what you were saying?",
+		"eff": {
+		  "triggers": [
             "bail out of chuck"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "I tried to follow him across the multiverse but my human body couldn't take it and I died.",
-        "eff": {
-          "removes": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "I tried to follow him across the multiverse but my human body couldn't take it and I died.",
+		"eff": {
+		  "removes": [
             "norris is enemy"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "chuck path dead"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "norris is enemy"
-        ],
-        "side": "right"
-      },
-      {
-        "text": "Shortly after I started to feel exhausted, I saw my life before my eyes.\n\nSince I've lived so much it was commically fast paced.\n\nAnd I died.",
-        "eff": {
-          "removes": [
+		],
+		"side": "right"
+	  },
+	  {
+		"text": "Shortly after I started to feel exhausted, I saw my life before my eyes.\n\nSince I've lived so much it was commically fast paced.\n\nAnd I died.",
+		"eff": {
+		  "removes": [
             "norris is friend"
-          ],
-          "triggers": [
+		  ],
+		  "triggers": [
             "chuck path dead"
-          ]
-        },
-        "req": [
+		  ]
+		},
+		"req": [
           "norris is friend"
-        ],
-        "side": "right"
-      }
-    ]
+		],
+		"side": "right"
+	  }
+	]
   },
   "game-intro: chuck path dead": {
-    "text": "You died?\n\nWTF!\n\nYou get out in a strange limb and now you die?",
-    "req": [
-      "event:game-intro",
+	"text": "You died?\n\nWTF!\n\nYou get out in a strange limb and now you die?",
+	"req": [
+	  "event:game-intro",
       "chuck path dead"
-    ],
-    "ops": [
-      {
-        "text": "*dead noices*\n\n(Game over)",
-        "eff": {
-          "exec": [
+	],
+	"ops": [
+	  {
+		"text": "*dead noices*\n\n(Game over)",
+		"eff": {
+		  "exec": [
             ""
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "Didn't you hear me?\n\nI am dead!\n\nI can't keep my adventure while dead!\n\n(Game over)",
-        "eff": {
-          "exec": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "Didn't you hear me?\n\nI am dead!\n\nI can't keep my adventure while dead!\n\n(Game over)",
+		"eff": {
+		  "exec": [
             "restart"
-          ]
-        },
-        "side": "right"
-      }
-    ]
+		  ]
+		},
+		"side": "right"
+	  }
+	]
   },
   "game-intro: bail out of chuck": {
-    "text": "Ok...\n\nHow about we go back to script?",
-    "req": [
-      "event:game-intro",
+	"text": "Ok...\n\nHow about we go back to script?",
+	"req": [
+	  "event:game-intro",
       "bail out of chuck"
-    ],
-    "ops": [
-      {
-        "text": "A yeah...\n\nAllow me to remove Norris from my mind...\n\n...\n\nI am... I am...\nOh! yea.\n\nI am an adventurer seeking a dragon.",
-        "eff": {
-          "triggers": [
+	],
+	"ops": [
+	  {
+		"text": "A yeah...\n\nAllow me to remove Norris from my mind...\n\n...\n\nI am... I am...\nOh! yea.\n\nI am an adventurer seeking a dragon.",
+		"eff": {
+		  "triggers": [
             "intro done"
-          ]
-        },
-        "side": "left"
-      },
-      {
-        "text": "Nop!\n\nThat is borring.\n\nSee ya!\n\n(Exit game)",
-        "eff": {
-          "exec": [
+		  ]
+		},
+		"side": "left"
+	  },
+	  {
+		"text": "Nop!\n\nThat is borring.\n\nSee ya!\n\n(Exit game)",
+		"eff": {
+		  "exec": [
             "hard_close_game"
-          ]
-        },
-        "side": "right"
-      }
-    ]
+		  ]
+		},
+		"side": "right"
+	  }
+	]
   }
 }
