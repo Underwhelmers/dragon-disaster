@@ -8,7 +8,7 @@
 		]
 	},
 	
-	"gamemode:jam-evaluation": {
+	"gamemode:jam-evaluation)-encounter-prototype": {
 		"initial_state": [
 			"scene 1 active",
 			"in progress"
@@ -18,7 +18,7 @@
 			"cards/jam-ver/scene2"
 		]
 	},
-	"gamemode:post-jam-game": {
+	"gamemode:post-jam-adventure)-no-dragon-encounter": {
 		"initial_state": [
 			"event:game-intro",
 			"location:nowhere",
