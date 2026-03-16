@@ -16,6 +16,9 @@ function makeDraggable(el) {
     document.removeEventListener('pointermove', pointermove);
     document.removeEventListener('pointerup', poinerup);
     console.log('dragend');
+    var parent = el.parentElement;
+    el.remove();
+    parent.appendChild(el)
   }
 
   const pointerdown = e => {
