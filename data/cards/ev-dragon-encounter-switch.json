@@ -46,7 +46,7 @@
     ],
     "ops": [
       {
-        "text": "You stand there with your back strainght...\n\nAnd a song in your heart, that is ready to come out...",
+        "text": "I stand with my back straight my principles in line...\n\nAnd a song in my heart that is ready to come out...",
         "eff": {
           "adds": [
             "event:ev-fem-alert-dom"
@@ -157,6 +157,9 @@
       {
         "text": "\"I.. I.. I'm a k-knight...\n\nI-I'm here f-for your...\n\nF-For your p-pressence...\"\n\nI try to make words come out, and try to avoid my nut to come out...\n\nFrom the humiliation I'm putting myself though...",
         "eff": {
+          "adds": [
+            "event:ev-male-alert-sub"
+          ],
           "triggers": [
             "stuttering"
           ]
@@ -166,12 +169,116 @@
       {
         "text": "I simply melt in silence under his gaze.\n\nI want nothing more than him to put me in my place, and take the lead...",
         "eff": {
+          "adds": [
+            "event:ev-male-alert-sub"
+          ],
           "triggers": [
-            "please daddy",
-            "stuttering"
+            "please daddy"
           ]
         },
         "side": "left"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: male-alert-dom": {
+    "text": "You find the dragon...\n\nHis emerald eyes, wide open and attentive, met with yours...\n\nThe size means nothing, even towering over you, you don't flinch\neven a little... ",
+    "req": [
+      "ev-forest-to-dragon finished",
+      "dragon is alert",
+      "dragon is male",
+      "pj is dominant",
+      "event:none"
+    ],
+    "ops": [
+      {
+        "text": "As I stand before this majestic specimen of a creature...\n\nI can't help, but to start chanting in awe of what's to come...",
+        "eff": {
+          "adds": [
+            "event:ev-male-alert-dom"
+          ],
+          "triggers": [
+            "poetry"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I look at his eyes, and I see a mirror...\n\nA burning intense love for cock that can't be put into words...\n\nAs my soulmate stands before me I know what to do...",
+        "eff": {
+          "adds": [
+            "event:ev-male-alert-dom"
+          ],
+          "triggers": [
+            "in heat"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: male-notalert-sub": {
+    "text": "His shape raises and falls in a slow rhitmic slumber...\n\nHis towering shape is enough to make your knees weak...",
+    "req": [
+      "ev-forest-to-dragon finished",
+      "event:none",
+      "dragon is male",
+      "!dragon is alert",
+      "pj is submissive"
+    ],
+    "ops": [
+      {
+        "text": "This feeling is nothing compared to the intensity of my burning emotions...\n\nI want to shout my love to the sky!...\n\nSo I wisper \"H-hi are you awake?\"",
+        "eff": {
+          "adds": [
+            "event:ev-male-notalert-sub"
+          ],
+          "triggers": [
+            "wisper"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "As I see his body sleeping...\n\nMy eyes drift down to his massive instrument...\n\nAnd my body starts to move on its own...",
+        "eff": {
+          "adds": [
+            "event:ev-male-notalert-sub"
+          ],
+          "triggers": [
+            "sleep kink"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: male-nonalert-dom": {
+    "text": "His shape raises and falls in a slow rhitmic slumber...\n\nAnd his towering shape is contrasted by his vulnerability...",
+    "req": [
+      "ev-forest-to-dragon finished",
+      "event:none",
+      "dragon is male",
+      "!dragon is alert",
+      "pj is dominant"
+    ],
+    "ops": [
+      {
+        "text": "Finally my time is here...\n\nThe only thing that comes to mind is how to approach delicately...\n\nAs I shout from the top of my lungs:\n\n\"I AM HERE MIGHTY DRAGON! WILL THOU HEAR MY PLEA?!\"",
+        "eff": {
+          "triggers": [
+            "boaster"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I guess you didn't mention his cock because you knew how would I react.\n\nThe only time a dragon has his cock out while they sleep is when they are in heat.\n\nFuck me soon, fuck me hard. What luck is this?!",
+        "eff": {
+          "triggers": [
+            "fuckwake"
+          ]
+        },
+        "side": "right"
       }
     ]
   }
