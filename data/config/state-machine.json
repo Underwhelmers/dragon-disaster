@@ -24,7 +24,9 @@
 			"location:nowhere",
 		],
 		"cards": [
-			"cards/game-intro"
+			"cards/game-intro",
+			"cards/ev-traveling",
+			"cards/ev-forest-to-dragon"
 		]
 	}
 }

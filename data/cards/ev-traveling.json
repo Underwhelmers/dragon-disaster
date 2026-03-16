@@ -1,0 +1,559 @@
+{
+  "ev-traveling: intro": {
+    "text": "And that's how our hero walked the path of lust.\n\nWith the only goal of reuniting with the creature that hunts his wet dreams.\n\nHis first obstacle was the forest of temptations.",
+    "req": [
+      "event:none",
+      "game-intro finished"
+    ],
+    "ops": [
+      {
+        "text": "Ohh!\n\nI bet I can find a lot of things in the forest!\n\nIs there tressure or bootie?\n\nI'm fine with both.",
+        "eff": {
+          "adds": [
+            "event:forest of temptations"
+          ],
+          "triggers": [
+            "immediate death"
+          ]
+        },
+        "side": "right"
+      },
+      {
+        "text": "I'll keep my temptantions at bay.\n\nMy sword is only for the dragon to witness.",
+        "eff": {
+          "adds": [
+            "event:forest of temptations"
+          ],
+          "triggers": [
+            "enters the forest"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  },
+  "ev-traveling: immediate death": {
+    "text": "You were tempted with the name alone...\n\nYou place one step in the forest and are immediatly lost by it's temptations\n\nYou walk aimlessly in a fever dream of superficial pleasure.",
+    "req": [
+      "event:forest of temptations",
+      "immediate death"
+    ],
+    "ops": [
+      {
+        "text": "YES!\n\nWait, that means I die?\n\nHello?...\n\nCan anybody hear me?...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Right, so that means?...\n\nWhere is the dragon?...\n\nWhere am I?...\n\nWhat am I?...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: enters the forest": {
+    "text": "The forest seem to be covered in a fine mist of a pinkish hue.\n\nTo your left you see a lake with an androginous shape dancing.\n\nTo your right you see a desolate path with scary trees and spider webs.",
+    "req": [
+      "event:forest of temptations",
+      "enters the forest"
+    ],
+    "ops": [
+      {
+        "text": "I couldn't pass on the dance!\n\nI was born with a degree on the dance floor, and a lineage of booty shakers.\n\nWait for me...",
+        "eff": {
+          "triggers": [
+            "dance death"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I am not that dumb to fall for that simple trap.\n\nTake me to the spriderwebs!\n\nThis will be a piece of cake.",
+        "eff": {
+          "triggers": [
+            "scary path"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: dance death": {
+    "text": "You approach the dancing figure and you start to rudely correct their posture and pace.\n\nThey look at you with a stranged face but they follow your advices.",
+    "req": [
+      "event:forest of temptations",
+      "dance death"
+    ],
+    "ops": [
+      {
+        "text": "Hold your legs spread wider, like this.",
+        "eff": {
+          "triggers": [
+            "dance death 2"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Your spine should flex more, you are a crecent moon, not a croasant.",
+        "eff": {
+          "triggers": [
+            "dance death 2"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: dance death 2": {
+    "text": "The misty creature takes your advice.\n\nYou spend the rest of your years teaching this mist creature the secrets of dance.\n\nAt the end you perish from old age spending you life as a teacher.",
+    "req": [
+      "event:forest of temptations",
+      "dance death 2"
+    ],
+    "ops": [
+      {
+        "text": "It was a life worth living...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "In my death bed surounded by my loved ones, I only hope my knowledge reaches the next generation...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: scary path": {
+    "text": "As you move though the webs and the trees, you reach a clear.\n\nAt the distance you see a naked female with a canine skull as head.\nAnd besides her, a male muscle filled werewolf.\n\nBoth have their shining eyes focued on you.",
+    "req": [
+      "event:forest of temptations",
+      "scary path"
+    ],
+    "ops": [
+      {
+        "text": "I will make eye contact with the female.",
+        "eff": {
+          "triggers": [
+            "chose female"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I will make eye contact with the male.",
+        "eff": {
+          "triggers": [
+            "choose male"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: male death": {
+    "text": "The werewolf, that was in the horizon, in a blink is in your face.\n\nHis pulsing knotted dick less than an inch from your face.",
+    "req": [
+      "event:forest of temptations",
+      "choose male",
+      "dragon is male"
+    ],
+    "ops": [
+      {
+        "text": "Nice!\n\nHe saved me the time to reach him...\n\nAllow me to swallow him whole.",
+        "eff": {
+          "triggers": [
+            "male death 2"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "If you though he was fast reaching me.\n\nJust see how fast I start chocking on his cock.",
+        "eff": {
+          "triggers": [
+            "male death 2"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: male death 2": {
+    "text": "You endulge yourself in sloppy feral fellatio.\n\nThe end comes as fast as you.",
+    "req": [
+      "event:forest of temptations",
+      "male death 2"
+    ],
+    "ops": [
+      {
+        "text": "Worth it...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Nooo!...\n\nI want more wolf cock!\n\nYou stupid narrator!\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: female death": {
+    "text": "Her shape, and the horizon suthenly, change to the pair of \"mountains\" half centimeter away from your face.\n\nHer soft mamaries pressing agains your face block any air to enter your  lungs.",
+    "req": [
+      "event:forest of temptations",
+      "dragon is female",
+      "chose female"
+    ],
+    "ops": [
+      {
+        "text": "HA!\n\nYou think I want to breath?",
+        "eff": {
+          "triggers": [
+            "female death 2"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Finally some good aciton.\n\nI'll start with this creature and I'll fuck my way to the dragon!",
+        "eff": {
+          "triggers": [
+            "female death 2"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: female death 2": {
+    "text": "Between your desperation and her surprise on your eagerness, both lose the balance.\n\nShe falls on top of you, and starts to play with herself as you struggle for air.",
+    "req": [
+      "event:forest of temptations",
+      "female death 2"
+    ],
+    "ops": [
+      {
+        "text": "Struggle... Yes.\n\nFor air... No.\n\nI'm just where I want to be.\n\nLet me be in eternal bliss.\n\n(Game over)\n\n",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "MAN! \nAt least give me more!\n\nI want the fake wendygo pussy!\n\nWho cares is not lore accurate!\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: targeted oposite sex f-m": {
+    "text": "As you make eye contact with him.\n\nHe turns arround giving you a knowing glance.\n\nAnd a path open in front of you.",
+    "req": [
+      "event:forest of temptations",
+      "dragon is female",
+      "choose male"
+    ],
+    "ops": [
+      {
+        "text": "Now I look at her...",
+        "eff": {
+          "triggers": [
+            "chose female"
+          ],
+          "exec": [
+            ""
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I walk the lonely road.\n\nDon't know where it goes.\n\nBut it's home to me, and I walk alone.",
+        "eff": {
+          "triggers": [
+            "the lonly road"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: targeted oposite sex m-f": {
+    "text": "As you make eye contact with her.\n\nShe turns arround giving you a knowing glance.\n\nAnd a path open in front of you.",
+    "req": [
+      "event:forest of temptations",
+      "chose female",
+      "dragon is male"
+    ],
+    "ops": [
+      {
+        "text": "Now I look at him...",
+        "eff": {
+          "triggers": [
+            "choose male"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I walk the lonely road.\n\nDon't know where it goes.\n\nBut it's home to me, and I walk alone.",
+        "eff": {
+          "triggers": [
+            "the lonly road",
+            "choose male"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: the lonly road dm": {
+    "text": "You see the end of the forest ahead of you...\n\nBut in your back...\n\nPressing against your ass... \n\nYou feel, warm cock...",
+    "req": [
+      "the lonly road",
+      "event:forest of temptations",
+      "dragon is male"
+    ],
+    "ops": [
+      {
+        "text": "Say no more!\n\nDown with the pants!",
+        "eff": {
+          "triggers": [
+            "cock in ass death"
+          ]
+        },
+        "side": "right"
+      },
+      {
+        "text": "I will not faulter at this point!\n\nThe exit is here!",
+        "eff": {
+          "triggers": [
+            "the lonly road dm2"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  },
+  "ev-traveling: the lonly road dm2": {
+    "text": "As you keep walking, you feel the cock getting warmer and slicker.\n\nHot breath hitting the back of your neck.",
+    "req": [
+      "event:forest of temptations",
+      "the lonly road dm2"
+    ],
+    "ops": [
+      {
+        "text": "I can't anymore!\n\nI drop my pants, and in a swifth motion only possible by years of training.\n\nWithout turning arround I calculate the trayectory for getting impaled.",
+        "eff": {
+          "triggers": [
+            "cock in ass death"
+          ]
+        },
+        "side": "right"
+      },
+      {
+        "text": "I have bigger fish to fry!\n\nBegone spectral cock!",
+        "eff": {
+          "triggers": [
+            "scape the forest"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  },
+  "ev-traveling: cock in ass death": {
+    "text": "The spectral cock slides glorously into your ass.\n\nThe motion smooth and filled with emotion.\n\nAnd you let yourself get fucked in the ass until you forget everything about you.",
+    "req": [
+      "event:forest of temptations",
+      "cock in ass death"
+    ],
+    "ops": [
+      {
+        "text": "I live and die for getting ass fucked...\n\nThat is my mantra.\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Glorous rectum fornicationem!\n\nYes!\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: the lonly road df": {
+    "text": "You see the end of the forest ahead of you...\n\nBut in your back...\n\nYou feel, soft tits pressing against you...\n\nAnd a dextrous hand rubbing your groin...\n",
+    "req": [
+      "event:forest of temptations",
+      "the lonly road",
+      "dragon is female"
+    ],
+    "ops": [
+      {
+        "text": "I will silently and swiftly lower my zipper...\n\nFor no particular reason...",
+        "eff": {
+          "triggers": [
+            "handjob death"
+          ]
+        },
+        "side": "right"
+      },
+      {
+        "text": "Bring it on forest, try your best!\n\nI will keep my eyes in the horizon and walk resolutely.",
+        "eff": {
+          "triggers": [
+            "the lonly road df2"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  },
+  "ev-traveling: the lonly road df2": {
+    "text": "The breasts start to move rhithmically as you hear what is clearly a pussy getting slicked.\n\nIn rithm your groin is held and rubbed trying to reach the flesh underneath the clothing.",
+    "req": [
+      "event:forest of temptations",
+      "the lonly road df2"
+    ],
+    "ops": [
+      {
+        "text": "You will not shake my focus.\n\nHave fun with your alone time formless creature.\n\nI will walk to the light at the end of the road.",
+        "eff": {
+          "triggers": [
+            "scape the forest"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Oh now is different...\n\nA mutual?...\n\nI yell \"Release the craken!\"\nAs I drop the entirety of my pants.",
+        "eff": {
+          "triggers": [
+            "handjob death"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: handjob death": {
+    "text": "Finally with access to your cock, the hand start to jerk you off.\n\nThe hand feels soft and firm you have no idea how, but now it feels like you are in some wet cavernous glorious cavity.\n\nAnd finally you start to climax and never stop.",
+    "req": [
+      "handjob death",
+      "event:forest of temptations"
+    ],
+    "ops": [
+      {
+        "text": "As I witness the geyser comming from my dick.\n\nI can't help but feel proud of my achievents...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "As my climax keeps going and going...\n\nI realize that I was finished by finishing, and die with a grin on my face...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: escape the forest": {
+    "text": "The temptation you have been feeling, seems to be ripped by the invisible line that denotes where the forest ends.\n\nFree from your first obstacle, you continue your journey.",
+    "req": [
+      "event:forest of temptations",
+      "scape the forest"
+    ],
+    "ops": [
+      {
+        "text": "You know what?...\n\nI changed my mind.\n\nLet's go back to the forest please...",
+        "eff": {
+          "triggers": [
+            "second thoughts death"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Ahead!\n\nThere is a dragon that I now desperatle need.\n\nIn order to release this fucknig nut.",
+        "eff": {
+          "adds": [
+            "event:none",
+            "ev-traveling finished"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-traveling: second thought death": {
+    "text": "Are you fucking serious?\n\nYou get no reward for this.\n\nA gigant treant lifts their feet and crushes you...",
+    "req": [
+      "second thoughts death",
+      "event:forest of temptations"
+    ],
+    "ops": [
+      {
+        "text": "Ohh, phew...\n\nI thought you were serious with the lack of reward.\n\nI get ready for getting feet.\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Forest Feet on Face Feels Formidable For me.\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "ev-forest-to-dragon: intro": {
+    "text": "Exiting the forest, you see the the entrance of a huge cave.\n\nFrom the burn marks and the size of the claws imprinted you have no doubts.\n\nYou are here...",
+    "req": [
+      "event:none",
+      "ev-traveling finished"
+    ],
+    "ops": [
+      {
+        "text": "YES!\n\nI'll rush into the cave!\n\nForeplay be damned!",
+        "eff": {
+          "adds": [
+            "ev-forest-to-dragon finished",
+            "dragon is alert",
+            "event:forest to dragon"
+          ]
+        },
+        "side": "right"
+      },
+      {
+        "text": "Let's move silently though the cave.\n\nThe claw marks seem fresh...\n\nI have a bad feeling about this",
+        "eff": {
+          "adds": [
+            "event:forest to dragon"
+          ],
+          "triggers": [
+            "move silently"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  },
+  "ev-forest-to-dragon: moving silently": {
+    "text": "The entrance give way to a widely open cave.\n\nThe floor is made of lose stones slabs.\n\nThis will be dificult.",
+    "req": [
+      "event:forest to dragon",
+      "move silently"
+    ],
+    "ops": [
+      {
+        "text": "I can handle it...\n\nLet's keep moving with caution.",
+        "eff": {
+          "triggers": [
+            "move silently 2"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "My boner will not last enolugh...\n\nCHARGE!!",
+        "eff": {
+          "adds": [
+            "dragon is alert"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-forest-to-dragon: moving silentliy 2": {
+    "text": "The stone slavs are replaced by a pile of bones that crack under your feet.\n\nMoving slowly will take a very long time...",
+    "req": [
+      "event:forest to dragon",
+      "move silently 2"
+    ],
+    "ops": [
+      {
+        "text": "There is no problem...\n\nI will move at my own pace...\n\nI'll rather live slowly than die fast...",
+        "eff": {
+          "triggers": [
+            "too cautios death"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I can't take forever...\n\nI'll sprint-crouch...\n\nSwift as a hare...\nDeadly as a scorpion...",
+        "eff": {
+          "triggers": [
+            "move fastly"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-forest-to-dragon: too cautions death": {
+    "text": "You move...\nStep by step...\nMmeasuring each one...\nFocused...\nTo not make a noise...\n\nYour focus is interrupted, when a warm exhalation hit's you in the head...",
+    "req": [
+      "event:forest to dragon",
+      "too cautios death"
+    ],
+    "ops": [
+      {
+        "text": "If I don't look up, nothing will happen to me...\n\nThose streams of saliva to my left and right are just bat droppings...\n\nI'm pretty sure of it.\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I lift my head in glorious anticipation...\n\n\"Please mighty dragon! Swallow me whole!\"\n\n(Vore scene)",
+        "eff": {
+          "triggers": [
+            "vore scene ending"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-forest-to-dragon: vore scene": {
+    "text": "Lifting your head, you can only see the massive tongue and throat of the dragon.\n\nStrangely, instead of killing you instantly...\nYou feel their tongue wrapping around you.\n\nIt lifts you inside their throat...",
+    "req": [
+      "event:forest to dragon",
+      "vore scene ending"
+    ],
+    "ops": [
+      {
+        "text": "I hug their wet soft tongue.\n\nI want to savor every moment of this wonderfull blanket.",
+        "eff": {
+          "triggers": [
+            "vore scene ending 2"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Let me go down there!\n\nI focus my gaze in their throat!.\n\nI let their warm breat cover me to from head to toes.",
+        "eff": {
+          "triggers": [
+            "vore scene ending 2"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-forest-to-dragon: vore scene ending 2": {
+    "text": "As you embrace this situation with joyfull cooperation.\n\nTheir throat starts to squish you and cover you in saliva as you go to black.\n\nYou worm deeper, following their throat movements...",
+    "req": [
+      "event:forest to dragon",
+      "vore scene ending 2"
+    ],
+    "ops": [
+      {
+        "text": "I ride this tunnel...\n\nI make my best impression of a worm, wiggling my way down...\n\nI want to make this feeling my last...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I swim down faster than a lubricated pill.\n\nI'll get in their warm, slick, dark, and small stomach.\n\nYou go on with the story, I'll rest here a while...\n\n(Game over)",
+        "eff": {
+          "exec": [
+            "restart"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-forest-to-dragon: move fastly": {
+    "text": "You move like a feather blown by the wind.\n\nA divine strike of swiftness moves across your entire body and now the bones are behind you.\n\nNow, you have your last obstacle ahead, you find  the dragon resting in front of you.",
+    "req": [
+      "event:forest to dragon",
+      "move fastly"
+    ],
+    "ops": [
+      {
+        "text": "Finally! \n\nLet's get this started...",
+        "eff": {
+          "adds": [
+            "ev-forest-to-dragon finished",
+            "event:none"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "YES!\nOk ok...\n\nCalm down...\nJust like you practiced...",
+        "eff": {
+          "adds": [
+            "ev-forest-to-dragon finished",
+            "event:none"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  }
+}

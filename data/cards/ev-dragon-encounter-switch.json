@@ -1,0 +1,178 @@
+{
+  "ev-dragon-encounter-switch: fem-alert-sub": {
+    "text": "You find the dragon...\n\nHer emerald eyes, wide open and attentive...\n\nYour words and confidence puffs out of existance...\n\nAs you stare your fears, while she judges you.",
+    "req": [
+      "event:none",
+      "ev-forest-to-dragon finished",
+      "dragon is female",
+      "dragon is alert",
+      "pj is submissive"
+    ],
+    "ops": [
+      {
+        "text": "\"I.. I.. I'm a k-knight...\n\nI-I'm here f-for your...\n\nF-For your p-pressence...\"\n\nI try to make words come out, and try to avoid my nut to come out...\n\nFrom the humiliation I'm putting myself though...",
+        "eff": {
+          "adds": [
+            "event:ev-fem-alert-sub"
+          ],
+          "triggers": [
+            "stuttering"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I simply melt in silence under her gaze.\n\nI want nothing more than her to put me in my place, and take the lead...",
+        "eff": {
+          "adds": [
+            "event:ev-fem-alert-sub"
+          ],
+          "triggers": [
+            "please mommy"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: fem-alert-dom": {
+    "text": "You find the dragon...\n\nHer emerald eyes, wide open and attentive, met with yours...\n\nThe size means nothing, even towering over you, you don't flinch\neven a little... ",
+    "req": [
+      "event:none",
+      "ev-forest-to-dragon finished",
+      "dragon is female",
+      "dragon is alert",
+      "pj is dominant"
+    ],
+    "ops": [
+      {
+        "text": "You stand there with your back strainght...\n\nAnd a song in your heart, that is ready to come out...",
+        "eff": {
+          "adds": [
+            "event:ev-fem-alert-dom"
+          ],
+          "triggers": [
+            "poetry"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I can see in her eyes...\n\nAnd I recognize the intensity and desire behind them...\n\nShe is in heat and can't hide it...",
+        "eff": {
+          "adds": [
+            "event:ev-fem-alert-dom"
+          ],
+          "triggers": [
+            "in heat"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: fem-notalert-sub": {
+    "text": "Her shape raises and falls in a slow rhitmic slumber...\n\nHer towering shape is enough to make your knees weak...",
+    "req": [
+      "event:none",
+      "ev-forest-to-dragon finished",
+      "dragon is female",
+      "pj is submissive",
+      "!dragon is alert"
+    ],
+    "ops": [
+      {
+        "text": "I will not back down now!\n\nI get my lungs filled with air and I wisper!\n\n\"h-hello... are... you.. awake... ?\"",
+        "eff": {
+          "adds": [
+            "event:ev-fem-notalert-sub"
+          ],
+          "triggers": [
+            "wisper"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I see her sleeping shape and I get overexited.\n\nI get to have her sleeping body.\n\n(Sleep kink)",
+        "eff": {
+          "adds": [
+            "event:ev-fem-notalert-sub"
+          ],
+          "triggers": [
+            "sleep kink"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: fem-notalert-dom": {
+    "text": "Her shape raises and falls in a slow rhitmic slumber...\n\nHer towering shape is contrasted by her vulnerability...",
+    "req": [
+      "ev-forest-to-dragon finished",
+      "dragon is female",
+      "pj is dominant",
+      "!dragon is alert",
+      "event:none"
+    ],
+    "ops": [
+      {
+        "text": "I'll use the strength of my voice to convey my message!.\n\n\"MIGHTY DRAGON HEAR MY PLEA!\"\n",
+        "eff": {
+          "adds": [
+            "event:ev-fem-notalert-dom"
+          ],
+          "triggers": [
+            "boaster"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "Don't thinkg that a well trained adventurer like me would let this slide...\n\nI have hightened sences and can percieve more than the average human!\n\nShe is in heat, I'll wake her  up with my dick!\n\n",
+        "eff": {
+          "adds": [
+            "event:ev-fem-notalert-dom"
+          ],
+          "triggers": [
+            "fuckwake",
+            "boaster"
+          ]
+        },
+        "side": "right"
+      }
+    ]
+  },
+  "ev-dragon-encounter-switch: male-alert-sub": {
+    "text": "You find the dragon...\n\nHis emerald eyes, wide open and attentive...\n\nYour words and confidence puffs out of existance...\n\nAs you stare your fears, while he judges you.",
+    "req": [
+      "dragon is alert",
+      "event:none",
+      "ev-forest-to-dragon finished",
+      "pj is submissive",
+      "dragon is male"
+    ],
+    "ops": [
+      {
+        "text": "\"I.. I.. I'm a k-knight...\n\nI-I'm here f-for your...\n\nF-For your p-pressence...\"\n\nI try to make words come out, and try to avoid my nut to come out...\n\nFrom the humiliation I'm putting myself though...",
+        "eff": {
+          "triggers": [
+            "stuttering"
+          ]
+        },
+        "side": "left"
+      },
+      {
+        "text": "I simply melt in silence under his gaze.\n\nI want nothing more than him to put me in my place, and take the lead...",
+        "eff": {
+          "triggers": [
+            "please daddy",
+            "stuttering"
+          ]
+        },
+        "side": "left"
+      }
+    ]
+  }
+}
